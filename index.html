@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-02 | Stopwatch</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- STOPWATCH PANEL -->
+  <div class="stopwatch">
+    <h1>Task-02</h1>
+    <h2>Stopwatch Web Application</h2>
+
+    <div id="display">00:00:00</div>
+
+    <div class="buttons">
+      <button class="start" onclick="startStopwatch()">Start</button>
+      <button class="pause" onclick="pauseStopwatch()">Pause</button>
+      <button class="reset" onclick="resetStopwatch()">Reset</button>
+      <button class="lap" onclick="lapTime()">Lap</button>
+    </div>
+  </div>
+
+  <!-- LAP DETAILS -->
+  <div class="laps-panel">
+    <h2>Lap Details</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Lap No</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody id="lapTable">
+        <!-- laps added dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

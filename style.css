@@ -1,0 +1,140 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background: linear-gradient(
+    120deg,
+    #1e0b4f,
+    #4f46e5,
+    #22d3ee
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+
+/* MAIN WRAPPER */
+.wrapper{
+  width:75%;
+  height:75vh;
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:30px;
+}
+
+/* STOPWATCH */
+.stopwatch{
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(15px);
+  border-radius:25px;
+  padding:50px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+.stopwatch h1{
+  opacity:0.8;
+  font-size:22px;
+}
+
+.stopwatch h2{
+  margin:10px 0 30px;
+}
+
+/* DISPLAY */
+#display{
+  font-size:64px;
+  font-weight:bold;
+  letter-spacing:3px;
+  margin-bottom:35px;
+  color:#22d3ee;
+}
+
+/* BUTTONS */
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:center;
+}
+
+button{
+  padding:14px 26px;
+  border:none;
+  border-radius:30px;
+  font-size:15px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.start{background:#22d3ee;color:#000;}
+.pause{background:#facc15;color:#000;}
+.reset{background:#ef4444;color:white;}
+.lap{background:#a78bfa;color:#000;}
+
+button:hover{
+  transform:scale(1.12);
+}
+
+/* LAP PANEL */
+.laps-panel{
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(12px);
+  border-radius:25px;
+  padding:30px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+  overflow-y:auto;
+}
+
+.laps-panel h2{
+  margin-bottom:20px;
+  text-align:center;
+}
+
+/* TABLE */
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+thead{
+  background:rgba(255,255,255,0.15);
+}
+
+th, td{
+  padding:12px;
+  text-align:center;
+}
+
+tbody tr:nth-child(even){
+  background:rgba(255,255,255,0.08);
+}
+
+tbody tr:hover{
+  background:rgba(34,211,238,0.2);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .wrapper{
+    width:90%;
+    height:auto;
+    grid-template-columns:1fr;
+  }
+}
